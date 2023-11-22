@@ -1,0 +1,205 @@
+
+/* Modal Criar Post */
+#modal__controller--post{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    width: 60vw;
+}
+
+#modal__controller--post::backdrop{
+    background-color: rgba(126, 120, 120, 0.8);
+}
+
+#closeModalButton {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--gray-6);
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: 500;
+}
+
+.post_modal__container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.post_modal__title--container {
+    color: var(--gray-1);
+    font-weight: 500;
+    font-size: 1.5625rem;
+}
+
+.post_modal__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.post_modal__form > label {
+    color: var(--gray-1);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.add__input{
+    background-color: var(--gray-7);
+    color: var(--gray-1);
+    font-size: 1rem;
+    border: 1px solid var(--gray-7);
+}
+
+#postTitle{
+    height: 30px;
+}
+
+#postDescription{
+    height: 10rem;
+}
+
+.btn__submit{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 1.875rem;
+}
+
+.btn__submit > button {
+    color: var(--gray-1);
+    background-color: var(--gray-6);
+    border: none;
+    height: 2.375rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    padding: 0.625rem;
+}
+
+/* Editar Post */
+#modal__controller--update{
+    width: 37.5rem;
+}
+
+.post_modal__container{
+    padding-bottom: 10px;
+}
+
+#postSubmitUpdate{
+    width: 100px;
+    margin-left: 190px;
+    color: var(--gray-1);
+    background-color: var(--gray-6);
+    border-radius: 0.25rem;
+    border: none;
+    padding: 8px;
+
+}
+
+/* Modal Deletar Post */
+#modal__controller--delete{
+    background-color: var(--gray-9);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+#modal__controller--delete::backdrop{
+    background-color: rgba(126, 120, 120, 0.8);
+}
+
+.post_modal__header--container{
+    color: var(--gray-1);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.post_modal__delete--container {
+    color: var(--gray-1);
+    font-weight: 700;
+    font-size: 1.5625rem;
+}
+
+.btn__delete{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-top: 1.25rem;
+    padding: 10px;
+}
+
+#cancelPostDelete{
+    width: 100px;
+    color: var(--gray-1);
+    background-color: var(--gray-6);
+    border-radius: 0.25rem;
+    border: none;
+    padding: 8px;
+}
+
+#deletePost{
+    width: 150px;
+    background-color: var(--alert-1);
+    color: var(--gray-6);
+    border-radius: 0.25rem;
+    border: none;
+    padding: 8px;
+}
+
+/* Mostrar Post */
+#modal__controller--viewPost{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    background-color: var(--gray-9);
+}
+
+#modal__controller--viewPost > .post_modal__container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.625rem;
+    margin-left: 0.625rem;
+
+}
+
+.btn__closeModal{
+    display: flex;
+    color: var(--gray-1);
+    background-color: var(--gray-6);
+    border: none;
+    height: 1.875rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    padding: 0.625rem;
+    align-items: center;
+    margin-left: 31.25rem;
+}
+
+.post_modal__container{
+    display: flex;
+    align-items: center;
+}
+
+.post_modal__container--logo{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
+
+#modal__title{
+    padding-top: 1.875rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-left: 0.625rem;
+}
+
+#text__area{
+    width: 80vw;
+    height: 25vh;
+    font-size: 16px;
+    background-color: var(--gray-8);
+    border: none;
+}

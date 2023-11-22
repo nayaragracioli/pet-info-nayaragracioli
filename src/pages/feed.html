@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Petinfo - Feed</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../src/styles/reset.css" />
+  <link rel="stylesheet" href="../../src/styles/globalStyles.css" />
+  <link rel="stylesheet" href="../../src/styles/feed.css" />
+  <link rel="stylesheet" href="../../src/styles/modal.css" />
+
+  <!-- Toastify -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+  <!-- SCRIPTS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" defer></script>
+  <script type="module" src="../scripts/feed.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+      <h2 class="title3 header__title bold">Petinfo</h2>
+      <nav class="user-nav__container">
+        <div class="user__action">
+          <button id="user__newpost" class="btn btn--brand btn--large text3">
+            Criar publicação
+          </button>
+          <img class="user__image" src="" alt="" />
+        </div>
+        <div class="user__logout hidden">
+          <h2 class="user__uniquename text3 bolder"></h2>
+          <button class="text4 logout__button">
+            <div class="logout__icon"></div>
+            Sair da conta
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1 class="feed__title text2 bolder">Feed</h1>
+
+    <!-- POSTS -->
+    <section class="posts">
+      <!-- Aqui serão renderizados os posts -->
+    </section>
+
+    <dialog class="modal__controller--viewPost">
+      <div id="modal__controller--viewPost">
+        <section>
+          <div class="post_modal__container">
+            <img class="post_modal__container--logo" id="img-logoModal" src="" alt="">
+            <span class="post_modal__container--name"></span>
+            <span class="post_modal__container--bar">|</span>
+            <span class="post_modal__container--time" id="postTime"></span>
+            <div id="btn__close">
+              <button type="button" class="btn__closeModal">x</button>
+            </div>
+          </div>
+        </section>
+        <section class="modal__content">
+          <div class="post">
+            <h3 id="modal__title"></h3>
+            <textarea name="" id="text__area" cols="50" rows="10" readonly></textarea>
+          </div>
+        </section>
+      </div>
+      
+    </dialog>
+
+    <dialog class="modal__controller--post">
+      <div id="modal__controller--post">
+        <div class="post_modal__container">
+          <div class="post_modal__title--container">
+            <p>Criando novo post</p>
+          </div>
+          <div class="post_modal__button--container">
+            <button id="closeModalButton">X</button>
+          </div>
+        </div>
+        <form class="post_modal__form">
+          <label for="#postTitle">Título do post</label>
+          <input class="add__input create__post" id="postTitle" type="text" name="title"
+            placeholder="Digite seu título aqui..." />
+  
+          <label for="#postDescription">Conteúdo do post</label>
+          <textarea class="add__input create__post" name="description" id="postDescription" cols="30" rows="10"
+            placeholder="Digite a descrição do seu post aqui..."></textarea>
+  
+          <div class="btn__submit">
+            <button id="cancelPostSubmit" type="submit">Cancelar</button>
+            <button id="addPostSubmit" type="submit">Publicar</button>
+          </div>
+  
+        </form>
+      </div>
+      
+    </dialog>
+
+    <dialog class="modal__controller--update">
+      <div id="modal__controller--update">
+        <div class="post_modal__container">
+          <div class="post_modal__title--container">
+            <p>Edição</p>
+          </div>
+        </div>
+        <form class="post_modal__form post_modal__update">
+          <label for="#titleUpdate">Título</label>
+          <input class="add__input" id="titleUpdate" type="text" name="title" placeholder="Digite seu título" />
+  
+          <label for="#postDescription">Descrição:</label>
+          <textarea class="add__input" name="description" id="descriptionUpdate" cols="30" rows="10"
+            placeholder="Digite sua descrição"></textarea>
+  
+          <div class="btn__submit">
+            <button id="postCancelUpdate" type="submit">Cancelar</button>
+            <button id="saveSubmitUpdate" type="submit">Salvar Alterações</button>
+          </div>
+        </form>
+      </div>
+      
+    </dialog>
+
+    <dialog class="modal__controller--delete">
+      <div id="modal__controller--delete">
+        <div class="post_modal__container">
+          <div class="post_modal__header--container">
+            <p>Confirmação de exclusão</p>
+          </div>
+        </div>
+        <div class="post_modal__delete--container">
+          <p>Tem certeza que deseja excluir este post?</p>
+        </div>
+        <div class="post_modal__description--container">
+          <p>Essa ação não poderá ser desfeita, então pedimos que tenha cautela antes de concluir</p>
+        </div>
+        <div class="btn__delete">
+          <button id="cancelPostDelete" type="submit">Cancelar</button>
+          <button id="deletePost" type="submit">Sim, excluir este post</button>
+        </div>
+      </div>
+      
+    </dialog>
+  </main>
+</body>
+
+</html>
